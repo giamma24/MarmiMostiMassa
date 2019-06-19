@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+    <span class="fillSpace"></span>
+  <span>Marmi Mosti Massa </span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="fillSpace"></span>
+
+  <mat-menu #userMenu="matMenu">
+      
+    <ng-template matMenuContent let-name="name">
+      <span>{{name}}</span>
+      <button mat-menu-item>Opzioni</button>
+      <button mat-menu-item>Esci</button>
+    </ng-template>
+  </mat-menu>
+
+  <mat-menu #languageMenu="matMenu" >    
+    <ng-template matMenuContent>
+        <img mat-menu-item class="menuIcon" src="../../assets/img/ITA_Flag.png" alt="Italiano">
+        <img mat-menu-item class="menuIcon" src="../../assets/img/ENG_Flag.png" alt="English">
+      </ng-template>
+  </mat-menu>
+  
+  <button mat-icon-button [matMenuTriggerFor]="userMenu" [matMenuTriggerData]="{name: 'Sabrina'}">
+  <mat-icon>face</mat-icon>
+  </button>
+  <button mat-icon-button [matMenuTriggerFor]="languageMenu">
+      <img mat-menu-item class="menuIcon" src="../../assets/img/ITA_Flag.png" alt="Italiano">
+  </button>
+
+</mat-toolbar>
