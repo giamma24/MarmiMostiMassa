@@ -14,9 +14,9 @@
   </mat-menu>
 
   <mat-menu #languageMenu="matMenu" >    
-    <ng-template matMenuContent >
-      <button *ngFor="let elem of this._translateService.OtherLanguage">
-        <span>.</span>
+    <ng-template matMenuContent class="BannerBottom">
+      <button *ngFor="let elem of this._translateService.OtherLanguage" (click)="changeLanguage($event, elem)">
+        
         <img mat-menu-item class="menuIcon" src="../../assets/img/{{elem}}_Flag.png" alt="{{elem}}">
       </button>
       </ng-template>

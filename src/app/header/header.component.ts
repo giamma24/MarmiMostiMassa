@@ -11,16 +11,22 @@ import { ConsoleService } from '../console.service';
 export class HeaderComponent implements OnInit {
 
   @Input() utente: String;
+
   
+  private Bottoni : String [];
   private _otherLang : String[];
   constructor(private _translateService: TraslateService, private _console : ConsoleService) {  }
 
 
+  public changeLanguage(event, element) {
+    this._console.append("Cambio lingua in: " + element);
+    this._translateService.setLanguage(element);
+    this._console.append("Lingua cambiata");
+  }
+
   ngOnInit() {
-    this._console.append("Inizializzo l'header")
+    this._console.append("Inizializzo l'header");
     this._console.append("La lingua è: " + this._translateService.CurrentLanguage);
-    
-    
   }
 
 }
