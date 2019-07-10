@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {TraslateService} from './traslate.service';
+import { ConsoleService } from './console.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MarmiMosti';
+  private _lang : String;
   
+  constructor(private _translateService: TraslateService) { 
+
+
+  }
+
 }
 

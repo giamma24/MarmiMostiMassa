@@ -23,6 +23,8 @@ import { ContattaciComponent } from './contattaci/contattaci.component';
 import { ChisiamoComponent } from './chisiamo/chisiamo.component';
 import { LavoriComponent } from './lavori/lavori.component';
 import {MatCardModule} from '@angular/material/card';
+import { TraslateService } from './traslate.service';
+import { ConsoleComponent } from './console/console.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import {MatCardModule} from '@angular/material/card';
     FooterComponent,
     ContattaciComponent,
     ChisiamoComponent,
-    LavoriComponent
+    LavoriComponent,
+    ConsoleComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,7 @@ import {MatCardModule} from '@angular/material/card';
     LayoutModule,
     MatTabsModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, TraslateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
